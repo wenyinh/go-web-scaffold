@@ -1,0 +1,56 @@
+{"level":"DEBUG","time":"2025-06-03T16:19:00.285+0800","caller":"go-web-scaffold/main.go:24","msg":"zap init success"}
+{"level":"DEBUG","time":"2025-06-03T16:33:29.292+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"DEBUG","time":"2025-06-03T16:33:49.703+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-03T16:34:24.773+0800","caller":"go-web-scaffold/main.go:63","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-03T16:34:24.774+0800","caller":"go-web-scaffold/main.go:69","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-03T16:34:50.119+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-03T16:50:47.416+0800","caller":"go-web-scaffold/main.go:63","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-03T16:50:47.416+0800","caller":"go-web-scaffold/main.go:69","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-03T16:52:57.659+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-03T16:53:06.024+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-03T16:53:06.024+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T17:33:40.481+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T17:33:40.499+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup tcp/${MYSQL_PORT}: unknown port"}
+{"level":"DEBUG","time":"2025-06-04T17:34:50.539+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T17:34:50.556+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup tcp/${MYSQL_PORT}: unknown port"}
+{"level":"DEBUG","time":"2025-06-04T17:40:39.126+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T17:40:39.143+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup tcp/${MYSQL_PORT}: unknown port"}
+{"level":"DEBUG","time":"2025-06-04T17:45:09.883+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T17:45:21.250+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T17:45:21.250+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T17:45:27.565+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T17:46:43.556+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T17:46:43.557+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T17:46:45.774+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T17:46:51.192+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T17:46:51.194+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T17:47:55.508+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T17:47:58.520+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T17:47:58.520+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T17:53:14.449+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T17:53:16.760+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T17:53:16.760+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T19:09:08.014+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T19:09:08.769+0800","caller":"redis/redis.go:24","msg":"ping redis Error:","error":"dial tcp: lookup redis: no such host"}
+{"level":"DEBUG","time":"2025-06-04T19:09:37.292+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T19:10:33.948+0800","caller":"logger/logger.go:73","msg":"/ping","status":200,"method":"GET","path":"/ping","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15","errors":"","cost":0.000759666}
+{"level":"INFO","time":"2025-06-04T19:10:33.955+0800","caller":"logger/logger.go:73","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1.1 Safari/605.1.15","errors":"","cost":0.000000417}
+{"level":"INFO","time":"2025-06-04T19:10:55.000+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T19:10:55.001+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
+{"level":"DEBUG","time":"2025-06-04T19:49:57.112+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T19:49:57.207+0800","caller":"redis/redis.go:24","msg":"ping redis Error:","error":"dial tcp: lookup redis: no such host"}
+{"level":"DEBUG","time":"2025-06-04T20:44:21.812+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T20:44:21.820+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)"}
+{"level":"DEBUG","time":"2025-06-04T22:15:23.236+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T22:15:23.259+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup mysql: no such host"}
+{"level":"DEBUG","time":"2025-06-04T22:22:31.491+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T22:22:31.512+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup mysql: no such host"}
+{"level":"DEBUG","time":"2025-06-04T22:34:52.465+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T22:34:52.494+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"dial tcp: lookup mysql: no such host"}
+{"level":"DEBUG","time":"2025-06-04T22:36:53.792+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T22:36:53.795+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"Error 1049 (42000): Unknown database 'go_web_app_db'"}
+{"level":"DEBUG","time":"2025-06-04T22:37:11.987+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"ERROR","time":"2025-06-04T22:37:11.988+0800","caller":"mysql/mysql.go:22","msg":"mysql connect err:","error":"Error 1049 (42000): Unknown database 'go_web_app_db'"}
+{"level":"DEBUG","time":"2025-06-04T23:10:46.857+0800","caller":"go-web-scaffold/main.go:33","msg":"zap init success"}
+{"level":"INFO","time":"2025-06-04T23:10:55.183+0800","caller":"go-web-scaffold/main.go:62","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-04T23:10:55.184+0800","caller":"go-web-scaffold/main.go:68","msg":"Server exiting"}
