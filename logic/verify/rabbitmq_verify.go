@@ -10,9 +10,11 @@ import (
 	"time"
 )
 
-const testQueueName = "test_queue"
-const consumerCount = 5
-const testMsgCount = 10
+const (
+	testQueueName = "test_queue"
+	consumerCount = 5
+	testMsgCount  = 10
+)
 
 func TestRabbitMQ() (err error) {
 	// 使用全局发布通道
