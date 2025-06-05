@@ -199,3 +199,10 @@
 {"level":"INFO","time":"2025-06-05T17:45:06.664+0800","caller":"mq/rabbitmq_init.go:16","msg":"init rabbitmq..."}
 {"level":"DEBUG","time":"2025-06-05T17:46:54.669+0800","caller":"go-web-scaffold/main.go:35","msg":"zap init success"}
 {"level":"INFO","time":"2025-06-05T17:46:54.676+0800","caller":"mq/rabbitmq_init.go:16","msg":"init rabbitmq..."}
+{"level":"INFO","time":"2025-06-05T17:57:22.757+0800","caller":"go-web-scaffold/main.go:85","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2025-06-05T17:57:22.757+0800","caller":"go-web-scaffold/main.go:91","msg":"Server exiting"}
+{"level":"ERROR","time":"2025-06-05T17:57:22.763+0800","caller":"verify/rabbitmq_verify.go:36","msg":"consumer failed","workerId":1,"error":"consumer channel exit unexpectedly"}
+{"level":"ERROR","time":"2025-06-05T17:57:22.763+0800","caller":"verify/rabbitmq_verify.go:36","msg":"consumer failed","workerId":2,"error":"consumer channel exit unexpectedly"}
+{"level":"ERROR","time":"2025-06-05T17:57:22.763+0800","caller":"verify/rabbitmq_verify.go:36","msg":"consumer failed","workerId":3,"error":"consumer channel exit unexpectedly"}
+{"level":"ERROR","time":"2025-06-05T17:57:22.763+0800","caller":"verify/rabbitmq_verify.go:36","msg":"consumer failed","workerId":0,"error":"consumer channel exit unexpectedly"}
+{"level":"ERROR","time":"2025-06-05T17:57:22.763+0800","caller":"verify/rabbitmq_verify.go:36","msg":"consumer failed","workerId":4,"error":"consumer channel exit unexpectedly"}
