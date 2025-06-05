@@ -27,3 +27,9 @@ func Init() (err error) {
 	fmt.Printf("%s! %s\n", pong, "Redis Connect Success!")
 	return
 }
+
+func CloseRedis() {
+	if RDB != nil {
+		RDB.Close()
+	}
+}

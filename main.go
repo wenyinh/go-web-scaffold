@@ -7,6 +7,8 @@ import (
 	"go-web-scaffold/dao/mysql"
 	"go-web-scaffold/dao/redis"
 	"go-web-scaffold/logger"
+	"go-web-scaffold/logic/verify"
+	"go-web-scaffold/mq"
 	"go-web-scaffold/router"
 	"go-web-scaffold/settings"
 	"go.uber.org/zap"
@@ -37,16 +39,37 @@ func main() {
 		fmt.Println("Init mysql Error:", err)
 		return
 	}
+	// 4. 验证MySQL服务
+	if err := verify.TestMySQL(); err != nil {
+		fmt.Println("Test mysql Error:", err)
+		return
+	}
 	defer mysql.DB.Close()
-	// 4. 初始化Redis连接
+	// 5. 初始化Redis连接
 	if err := redis.Init(); err != nil {
 		fmt.Println("Init redis Error:", err)
 		return
 	}
+	// 6. 验证Redis服务
+	if err := verify.TestRedis(); err != nil {
+		fmt.Println("Test redis Error:", err)
+		return
+	}
 	defer redis.RDB.Close()
-	// 5. 注册路由
+	// 7. 初始化RabbitMQ连接
+	if err := mq.InitRabbitMQ(); err != nil {
+		fmt.Println("Init rabbitmq Error:", err)
+		return
+	}
+	// 8. 验证RabbitMQ服务
+	if err := verify.TestRabbitMQ(); err != nil {
+		fmt.Println("Test rabbitmq Error:", err)
+		return
+	}
+	defer mq.CloseRabbitMQ()
+	// 9. 注册路由
 	r := router.Setup()
-	// 6. 关机设置
+	// 10. 关机设置
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
 		Handler: r,

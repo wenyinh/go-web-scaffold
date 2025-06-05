@@ -11,7 +11,7 @@ import (
 var DB *sqlx.DB
 
 func Init() (err error) {
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",
 		viper.GetString("mysql.user"),
 		viper.GetString("mysql.password"),
 		viper.GetString("mysql.host"),
@@ -31,4 +31,10 @@ func Init() (err error) {
 	DB.SetMaxOpenConns(viper.GetInt("mysql.max_open_conns"))
 	DB.SetMaxIdleConns(viper.GetInt("mysql.max_idle_conns"))
 	return
+}
+
+func CloseMySQL() {
+	if DB != nil {
+		DB.Close()
+	}
 }
