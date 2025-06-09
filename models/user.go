@@ -1,10 +1,9 @@
 package models
 
-import "time"
+import "gorm.io/gorm"
 
 type User struct {
-	Id        int64     `db:"id"`
-	Name      string    `db:"name"`
-	Email     string    `db:"email"`
-	CreatedAt time.Time `db:"created_at"`
+	gorm.Model
+	Name  string `gorm:"size:64;not null;unique"`
+	Email string `gorm:"size:128;not null;unique"`
 }

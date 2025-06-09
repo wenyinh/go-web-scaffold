@@ -10,14 +10,7 @@ import (
 )
 
 func createTableIfNotExists() (err error) {
-	createTableSQL := `
-	CREATE TABLE IF NOT EXISTS users (
-		id BIGINT AUTO_INCREMENT PRIMARY KEY,
-		name VARCHAR(64) NOT NULL,
-		email VARCHAR(128) NOT NULL UNIQUE,
-		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-	);`
-	_, err = mysql.DB.Exec(createTableSQL)
+	err = mysql.DB.AutoMigrate(&models.User{})
 	if err != nil {
 		zap.L().Error("create table failed", zap.Error(err))
 		return
@@ -32,7 +25,7 @@ func createUser(name, email string) (err error) {
 		return
 	}
 	user := models.User{Name: name, Email: email}
-	_, err = mysql.DB.Exec("INSERT INTO users (name, email) VALUES (?, ?)", user.Name, user.Email)
+	err = mysql.DB.Create(&user).Error
 	if err != nil {
 		zap.L().Error("Insert user failed", zap.Error(err))
 		return
@@ -43,7 +36,7 @@ func createUser(name, email string) (err error) {
 
 func getUserByName(name string) (*models.User, error) {
 	var user models.User
-	if err := mysql.DB.Get(&user, "SELECT * FROM users WHERE name = ?", name); err != nil {
+	if err := mysql.DB.Where("name = ?", name).First(&user).Error; err != nil {
 		zap.L().Error("get user failed", zap.Error(err))
 		return nil, err
 	}

@@ -44,7 +44,7 @@ func main() {
 		fmt.Println("Test mysql Error:", err)
 		return
 	}
-	defer mysql.DB.Close()
+	defer mysql.CloseMySQL()
 	// 5. 初始化Redis连接
 	if err := redis.Init(); err != nil {
 		fmt.Println("Init redis Error:", err)
@@ -55,7 +55,7 @@ func main() {
 		fmt.Println("Test redis Error:", err)
 		return
 	}
-	defer redis.RDB.Close()
+	defer redis.CloseRedis()
 	// 7. 初始化RabbitMQ连接
 	if err := mq.InitRabbitMQ(); err != nil {
 		fmt.Println("Init rabbitmq Error:", err)
