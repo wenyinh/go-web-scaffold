@@ -36,7 +36,7 @@ func createUser(name, email string) (err error) {
 
 func getUserByName(name string) (*models.User, error) {
 	var user models.User
-	if err := mysql.DB.Where("name = ?", name).First(&user).Error; err != nil {
+	if err := mysql.DB.Model(&user).Where("name = ?", name).First(&user).Error; err != nil {
 		zap.L().Error("get user failed", zap.Error(err))
 		return nil, err
 	}
