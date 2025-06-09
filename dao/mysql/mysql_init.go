@@ -9,7 +9,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var DB *gorm.DB
+var db *gorm.DB
 var sqlDB *sql.DB
 
 func Init() (err error) {
@@ -19,7 +19,7 @@ func Init() (err error) {
 		viper.GetString("mysql.host"),
 		viper.GetString("mysql.port"),
 		viper.GetString("mysql.dbname"))
-	DB, err = gorm.Open(mysql.New(mysql.Config{
+	db, err = gorm.Open(mysql.New(mysql.Config{
 		DSN:                       dsn,   // DSN data source name
 		DefaultStringSize:         256,   // string 类型字段的默认长度
 		DisableDatetimePrecision:  true,  // 禁用 datetime 精度，MySQL 5.6 之前的数据库不支持
@@ -32,7 +32,7 @@ func Init() (err error) {
 		return
 	}
 	fmt.Println("PONG! Mysql Connect Success!")
-	sqlDB, _ = DB.DB()
+	sqlDB, _ = db.DB()
 	sqlDB.SetMaxIdleConns(viper.GetInt("mysql.max_idle_conns"))
 	sqlDB.SetMaxOpenConns(viper.GetInt("mysql.max_open_conns"))
 	return
