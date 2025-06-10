@@ -12,17 +12,17 @@ log:
 
 mysql:
   # host: "127.0.0.1" # 如果在本地跑，改成127.0.0.1
-  host: "mysql"
+  host: "127.0.0.1"
   port: 3306
   user: "root"
-  password: "123" # 本地跑没有密码，若go run main.go 在本地跑，改为空密码
+  password: "20011024" # 本地跑没有密码，若go run main.go 在本地跑，改为空密码
   dbname: "go_web_app_db"
   max_open_conns: 200
   max_idle_conns: 50
 
 redis:
   # host: "127.0.0.1" # 如果在本地跑，改成127.0.0.1
-  host: "redis"
+  host: "127.0.0.1"
   port: 6379
   user: "root"
   password: ""
@@ -30,7 +30,7 @@ redis:
   poor_size: 100
 
 rabbitmq:
-  host: "rabbitmq"
+  host: "127.0.0.1"
   port: 5672
   user: "guest"
   password: "guest"
