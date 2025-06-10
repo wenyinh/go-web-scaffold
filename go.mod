@@ -1,8 +1,6 @@
 module go-web-scaffold
 
-go 1.23.0
-
-toolchain go1.23.9
+go 1.23.9
 
 require (
 	github.com/fsnotify/fsnotify v1.8.0
