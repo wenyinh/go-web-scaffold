@@ -21,7 +21,6 @@ import (
 )
 
 func main() {
-	// 1. 加载配置
 	fmt.Println("Starting Web Scaffold...")
 	if err := settings.Init(); err != nil {
 		fmt.Println("Init Settings Error:", err)
