@@ -4,13 +4,13 @@ import (
 	"context"
 	"fmt"
 	"github.com/spf13/viper"
+	"go-web-scaffold/api/user"
+	"go-web-scaffold/pkg/config"
 	"go-web-scaffold/pkg/dao/mysql"
 	"go-web-scaffold/pkg/dao/redis"
 	"go-web-scaffold/pkg/logger"
 	"go-web-scaffold/pkg/mq"
-	"go-web-scaffold/pkg/router"
 	"go-web-scaffold/pkg/service/verify"
-	"go-web-scaffold/pkg/settings"
 	"go.uber.org/zap"
 	"log"
 	"net/http"
@@ -22,7 +22,7 @@ import (
 
 func main() {
 	fmt.Println("Starting Web Scaffold...")
-	if err := settings.Init(); err != nil {
+	if err := config.Init(); err != nil {
 		fmt.Println("Init Settings Error:", err)
 		return
 	}
@@ -67,7 +67,7 @@ func main() {
 	}
 	defer mq.CloseRabbitMQ()
 	// 9. 注册路由
-	r := router.Setup()
+	r := user.RegisterRouter()
 	// 10. 关机设置
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", viper.GetInt("app.port")),
