@@ -2,8 +2,8 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-web-scaffold/controller"
-	"go-web-scaffold/logger"
+	"go-web-scaffold/api/controller"
+	"go-web-scaffold/pkg/logger"
 )
 
 func Setup() *gin.Engine {

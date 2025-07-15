@@ -15,7 +15,7 @@ mysql:
   host: "127.0.0.1"
   port: 3306
   user: "root"
-  password: "" # 本地跑没有密码，若go run main.go 在本地跑，改为空密码
+  password: "20011024" # 本地跑没有密码，若go run main.go 在本地跑，改为空密码
   dbname: "go_web_app_db"
   max_open_conns: 200
   max_idle_conns: 50

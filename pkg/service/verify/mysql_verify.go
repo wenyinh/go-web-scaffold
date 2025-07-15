@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/google/uuid"
-	"go-web-scaffold/service"
+	"go-web-scaffold/pkg/service"
 )
 
 func TestMySQL() error {

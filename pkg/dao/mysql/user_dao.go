@@ -2,7 +2,7 @@ package mysql
 
 import (
 	"errors"
-	"go-web-scaffold/models"
+	"go-web-scaffold/pkg/models"
 )
 
 func CreateUserTableIfNotExists() error {

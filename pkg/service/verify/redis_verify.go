@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/google/uuid"
-	"go-web-scaffold/dao/redis"
+	"go-web-scaffold/pkg/dao/redis"
 	"go.uber.org/zap"
 	"time"
 )

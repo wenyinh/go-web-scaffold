@@ -3,8 +3,8 @@ package service
 import (
 	"errors"
 	"fmt"
-	"go-web-scaffold/dao/mysql"
-	"go-web-scaffold/models"
+	"go-web-scaffold/pkg/dao/mysql"
+	"go-web-scaffold/pkg/models"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	amqp "github.com/rabbitmq/amqp091-go"
-	"go-web-scaffold/mq"
+	"go-web-scaffold/pkg/mq"
 	"go.uber.org/zap"
 	"sync"
 	"time"

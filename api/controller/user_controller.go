@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"go-web-scaffold/models"
-	"go-web-scaffold/service"
-	"go-web-scaffold/utils"
+	"go-web-scaffold/pkg/models"
+	"go-web-scaffold/pkg/service"
+	"go-web-scaffold/pkg/utils"
 	"strconv"
 )
 
